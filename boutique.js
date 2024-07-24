@@ -4,11 +4,7 @@ const images = [
       description: "Maillot Club Africain 2023-11-07",
       price: "120 DT"
     },
-    {
-      imageUrl: "https://clubafricain.com/wp-content/uploads/2023/12/WhatsApp-Image-2023-12-14-at-07.10.48_27342bc5-300x300.jpg",
-      description: "Maillot Club Africain 2023-12-14",
-      price: "110 DT"
-    },
+ 
     {
       imageUrl: "https://clubafricain.com/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-25-at-13.18.43_27dcdaee-300x300.jpg",
       description: "Maillot Club Africain 2024-01-25",
@@ -36,15 +32,15 @@ const images = [
     }
   ];
 const main = document.querySelector("main")
-
 const htmlStrings = images.map(item => `
     <div class="card">
       <img src="${item.imageUrl}" alt="${item.description}">
       <div class="card-body">
         <h5 class="card-title">${item.description}</h5>
         <p class="card-text">Price: ${item.price}</p>
-         <button>add to cart</button>
-        </div>
+        <button>Add to Cart</button>
+      </div>
     </div>
   `).join('');
+  
   main.innerHTML= htmlStrings
